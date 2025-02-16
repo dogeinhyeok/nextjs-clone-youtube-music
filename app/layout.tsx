@@ -15,17 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS Clone YouTube Music",
-  description: "NextJS Clone YouTube Music",
+  title: "YouTube Music - Next.js",
+  description: "Next.js로 만든 YouTube Music 클론 코딩입니다.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "NextJS Clone YouTube Music",
-    description: "NextJS Clone YouTube Music",
+    title: "YouTube Music - Next.js",
+    description: "Next.js로 만든 YouTube Music 클론 코딩입니다.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1707833558984-3293e794031c",
+        url: "/og-image.png",
         alt: "og-image",
       },
     ],
