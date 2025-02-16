@@ -2,11 +2,14 @@ import React from "react";
 import Category from "./components/category";
 import PagePadding from "@/components/page-padding";
 import PlayListCarousel from "@/components/playlist-carousel";
-import { dummyPlaylistArray } from "@/lib/dummyData";
+import { dummyPlaylistArray, getPlaylistById } from "@/lib/dummyData";
 import UserAvatar from "@/components/user-avatar";
 
 const page = async () => {
-  const dummyPlaylistArray1 = await [...dummyPlaylistArray];
+  const dummyPlaylistArray1 = [...dummyPlaylistArray];
+  const dummyPlaylistArray2 = [await getPlaylistById(1)];
+  const dummyPlaylistArray3 = [await getPlaylistById(2)];
+  const dummyPlaylistArray4 = [await getPlaylistById(3)];
 
   return (
     <PagePadding>
@@ -14,7 +17,7 @@ const page = async () => {
         <div className="min-h-[500px]">
           <div className="mt-9"></div>
           <Category />
-          <div className="mt-12"></div>
+          <div className="mt-20"></div>
           <PlayListCarousel
             playlistArray={[...dummyPlaylistArray1]}
             Thumbnail={
@@ -24,6 +27,22 @@ const page = async () => {
             }
             title="다시 듣기"
             subTitle="도도"
+          />
+          <div className="mt-20"></div>
+          <PlayListCarousel
+            playlistArray={[...dummyPlaylistArray2]}
+            title="케이시 - Full Bloom"
+            subTitle="새로운 앨범"
+          />
+          <div className="mt-20"></div>
+          <PlayListCarousel
+            playlistArray={[...dummyPlaylistArray3]}
+            title="커뮤니티 제공"
+          />
+          <div className="mt-20"></div>
+          <PlayListCarousel
+            playlistArray={[...dummyPlaylistArray4]}
+            title="커버 및 리믹스"
           />
         </div>
       </div>
