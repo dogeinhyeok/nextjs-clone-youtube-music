@@ -9,7 +9,7 @@ const CategoryMenu = ({
   label: string;
 }) => {
   return (
-    <div className="w-full h-[56px] py-4 px-[24px] flex flex-row gap-4 items-center bg-neutral-700 text-[20px] cursor-pointer rounded-sm hover:bg-neutral-800 transition">
+    <div className="w-full h-[56px] py-4 px-[24px] flex flex-row gap-4 items-center bg-neutral-700 text-[20px] cursor-pointer rounded-sm hover:bg-neutral-800 transition select-none">
       {icon}
       {label}
     </div>

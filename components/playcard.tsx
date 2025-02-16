@@ -57,8 +57,8 @@ const PlayListCard = ({ playlist }: { playlist: Playlist }) => {
         </div>
       </section>
       <section className="mt-2">
-        <div>{playlistName}</div>
-        <div className="text-neutral-500">{`${owner} - 트랙 ${songList.length}개`}</div>
+        <div className="select-none">{playlistName}</div>
+        <div className="text-neutral-500 select-none">{`${owner} - 트랙 ${songList.length}개`}</div>
       </section>
     </article>
   );

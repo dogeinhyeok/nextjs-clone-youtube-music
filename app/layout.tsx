@@ -15,8 +15,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Clone YT Music",
-  description: "Clone YouTube Music",
+  title: "NextJS Clone YouTube Music",
+  description: "NextJS Clone YouTube Music",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "NextJS Clone YouTube Music",
+    description: "NextJS Clone YouTube Music",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1707833558984-3293e794031c",
+        alt: "og-image",
+      },
+    ],
+  },
 };
 
 export default async function RootLayout({
