@@ -16,6 +16,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import useUIState from "@/hooks/useUIState";
 
 const HeaderDrawer = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +45,8 @@ const HeaderDrawer = ({ children }: { children: React.ReactNode }) => {
 };
 
 const Header = ({ children }: { children: React.ReactNode }) => {
+  const { homeCategory, headerImageSrc } = useUIState();
+
   const [isScrolled, setIsScrolled] = useState(false);
   const headRef = useRef<HTMLDivElement | null>(null);
 
@@ -71,13 +74,16 @@ const Header = ({ children }: { children: React.ReactNode }) => {
       <section className="absolute top-0 w-full">
         <div className="relative h-[400px] w-full">
           <Image
-            src="https://images.unsplash.com/photo-1707833558984-3293e794031c"
+            src={
+              headerImageSrc ||
+              "https://images.unsplash.com/photo-1707833558984-3293e794031c"
+            }
             className="object-cover"
             alt="mediaItem"
             fill
           />
-          <div className="absolute h-[400px] top-0 bg-black opacity-40 w-full" />
-          <div className="absolute h-[400px] top-0 bg-gradient-to-t from-black w-full" />
+          <div className="absolute h-[400px] top-0 bg-background opacity-40 w-full" />
+          <div className="absolute h-[400px] top-0 bg-gradient-to-t from-background w-full" />
         </div>
       </section>
       {/* 검색 + 메뉴 + 유저 아바타 */}
