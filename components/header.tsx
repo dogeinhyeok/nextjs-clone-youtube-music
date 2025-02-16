@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import UserAvatar from "@/components/user-avatar";
 import PagePadding from "@/components/page-padding";
@@ -8,7 +8,6 @@ import { FaChromecast } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import Logo from "@/components/elements/logo";
 import Navigator from "@/components/elements/navigator";
-import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 import {
@@ -46,17 +45,23 @@ const HeaderDrawer = ({ children }: { children: React.ReactNode }) => {
 
 const Header = ({ children }: { children: React.ReactNode }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const headRef = useRef<HTMLDivElement>(null);
+  const headRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const currentRef = headRef.current;
     const handleScroll = () => {
-      const scrollValue = headRef?.current?.scrollTop;
+      const scrollValue = currentRef?.scrollTop;
       setIsScrolled(scrollValue !== 0);
     };
 
-    headRef?.current?.addEventListener("scroll", handleScroll);
+    if (currentRef) {
+      currentRef.addEventListener("scroll", handleScroll);
+    }
+
     return () => {
-      headRef?.current?.removeEventListener("scroll", handleScroll);
+      if (currentRef) {
+        currentRef.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
