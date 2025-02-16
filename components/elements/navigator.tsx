@@ -3,7 +3,7 @@
 import React, { useMemo } from "react";
 import { GoHome } from "react-icons/go";
 import { FiPlus, FiMusic, FiCompass } from "react-icons/fi";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { dummyPlaylistArray } from "@/lib/dummyData";

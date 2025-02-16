@@ -9,7 +9,7 @@ const PlayListNav = ({
 }: {
   playlist: (typeof dummyPlaylistArray)[number];
 }) => {
-  const { id, owner, playlistName, songList } = playlist;
+  const { owner, playlistName } = playlist;
 
   const onClickPlay = () => {
     console.log("play");
