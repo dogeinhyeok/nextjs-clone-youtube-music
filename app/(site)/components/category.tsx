@@ -6,8 +6,7 @@ import { homeCategoryList } from "@/lib/dummyData";
 import { cn } from "@/lib/utils";
 
 const Category = () => {
-  const { homeCategory, headerImageSrc, setHomeCategory, setHeaderImageSrc } =
-    useUIState();
+  const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
 
   const onClickCategory = (item: { label: string; src: string }) => {
     if (homeCategory === item.label) {
