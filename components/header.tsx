@@ -97,7 +97,7 @@ const Header = ({ children }: { children: React.ReactNode }) => {
                 <FiSearch size={24} />
               </div>
               <input
-                className="h-full w-full bg-transparent"
+                className="h-full w-full bg-transparent outline-none"
                 placeholder="노래, 앨범, 아티스트, 팟캐스트 검색"
                 type="text"
               />
