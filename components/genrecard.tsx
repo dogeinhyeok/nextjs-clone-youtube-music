@@ -13,7 +13,9 @@ const GenreCard: React.FC<GenreCardProps> = ({ genre }) => {
         className="h-full w-2 rounded-l-lg"
         style={{ backgroundColor: hex }}
       ></div>
-      <div className="px-4 flex justify-center items-center">{genre}</div>
+      <div className="px-4 flex justify-center items-center select-none">
+        {genre}
+      </div>
     </div>
   );
 };
