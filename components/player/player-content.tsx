@@ -1,7 +1,14 @@
 import React from "react";
+import { Slider as PlayerSlider } from "@/components/player/player-slider";
 
-const PlayerWrapper: React.FC = () => {
-  return <div>PlayerWrapper</div>;
+const PlayerContent: React.FC = () => {
+  return (
+    <div className="h-full w-full relative">
+      <div className="absolute top-[-16px] w-full">
+        <PlayerSlider />
+      </div>
+    </div>
+  );
 };
 
-export default PlayerWrapper;
+export default PlayerContent;
