@@ -3,16 +3,18 @@
 import React from "react";
 import { dummyPlaylistArray } from "@/lib/dummy-data";
 import { IoMdPlayCircle } from "react-icons/io";
+import usePlayerState from "@/hooks/use-player-state";
 
 const PlayListNavigation = ({
   playlist,
 }: {
   playlist: (typeof dummyPlaylistArray)[number];
 }) => {
+  const { addSongList } = usePlayerState();
   const { owner, playlistName } = playlist;
 
   const onClickPlay = () => {
-    console.log("play");
+    addSongList(playlist.songList);
   };
 
   return (

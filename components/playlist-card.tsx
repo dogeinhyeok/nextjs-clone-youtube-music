@@ -8,8 +8,10 @@ import { useRouter } from "next/navigation";
 import { MdMoreVert } from "react-icons/md";
 import { FiPlay } from "react-icons/fi";
 import IconButton from "./elements/icon-button";
+import usePlayerState from "@/hooks/use-player-state";
 
 const PlayListCard = ({ playlist }: { playlist: Playlist }) => {
+  const { addSongList } = usePlayerState();
   const { push } = useRouter();
   const { id, owner = "", playlistName = "", songList = [] } = playlist;
 
@@ -21,8 +23,14 @@ const PlayListCard = ({ playlist }: { playlist: Playlist }) => {
     setImageSrc(randomImage);
   }, [songList]);
 
-  const onClickCard = () => {
-    push(`/playlist?list=${id}`);
+  const onClickCard = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    if (id) push(`/playlist?list=${id}`);
+  };
+
+  const onClickPlay = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    addSongList(songList);
   };
 
   return (
@@ -44,7 +52,10 @@ const PlayListCard = ({ playlist }: { playlist: Playlist }) => {
           <div className="absolute top-2 right-4">
             <IconButton icon={<MdMoreVert size={20} />} />
           </div>
-          <div className="absolute bottom-4 right-4 flex items-center justify-center translate-gpu transition-transform hover:scale-110 bg-[rgba(0,0,0,0.7)] w-[45px] h-[45px] rounded-full hover:bg-[rgba(0,0,0,0.9) pl-1">
+          <div
+            onClick={onClickPlay}
+            className="absolute bottom-4 right-4 flex items-center justify-center translate-gpu transition-transform hover:scale-110 bg-[rgba(0,0,0,0.7)] w-[45px] h-[45px] rounded-full hover:bg-[rgba(0,0,0,0.9) pl-1"
+          >
             <FiPlay size={22} color="red" />
           </div>
         </div>

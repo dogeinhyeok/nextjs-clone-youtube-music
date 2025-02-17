@@ -1,16 +1,27 @@
+"use client";
+
 import { Playlist } from "@/types";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IconButton from "./elements/icon-button";
 import { FiFolderPlus, FiMoreVertical, FiPlay } from "react-icons/fi";
 import Image from "next/image";
 import { getRandomElementFromArray } from "@/lib/utils";
 import WhiteButton from "@/components/elements/white-button";
 import DarkButton from "@/components/elements/dark-button";
+import usePlayerState from "@/hooks/use-player-state";
 
 const PlayListHeader = ({ playlist }: { playlist: Playlist }) => {
   const { playlistName, owner, songList } = playlist;
+  const { addSongList } = usePlayerState();
 
-  const randomSong = getRandomElementFromArray(songList);
+  const [randomSong, setRandomSong] = useState(songList[0]);
+
+  useEffect(() => {
+    // 클라이언트에서만 실행
+    if (typeof window !== "undefined") {
+      setRandomSong(getRandomElementFromArray(songList));
+    }
+  }, [songList]);
 
   return (
     <section>
@@ -27,6 +38,7 @@ const PlayListHeader = ({ playlist }: { playlist: Playlist }) => {
           <ul className="hidden lg:flex flex-row gap-4 mt-4">
             <WhiteButton
               className={"w-[85px] text-[14px]"}
+              onClick={() => addSongList(songList)}
               icon={<FiPlay />}
               label="재생"
             />
@@ -42,6 +54,7 @@ const PlayListHeader = ({ playlist }: { playlist: Playlist }) => {
       <ul className="flex flex-row gap-4 mt-4 lg:hidden">
         <WhiteButton
           className={"w-[85px] text-[14px]"}
+          onClick={() => addSongList(songList)}
           icon={<FiPlay />}
           label="재생"
         />

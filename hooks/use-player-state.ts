@@ -15,15 +15,11 @@ interface PlayerState {
 }
 
 const usePlayerState = create<PlayerState>((set) => ({
-  isVisiblePlayer: true,
+  isVisiblePlayer: false,
   setIsVisiblePlayer: (isVisiblePlayer) => set({ isVisiblePlayer }),
   activeSong: dummyAllSongList[0],
   prevPlayerQueue: [],
-  nextPlayerQueue: [
-    dummyAllSongList[1],
-    dummyAllSongList[2],
-    dummyAllSongList[3],
-  ],
+  nextPlayerQueue: [],
   addSongList: (songList: Song[]) =>
     set((prev) => {
       const prevSong = prev.activeSong;
