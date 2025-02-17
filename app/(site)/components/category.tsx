@@ -1,12 +1,13 @@
 "use client";
 
 import React from "react";
-import useUIState from "@/hooks/useUIState";
-import { homeCategoryList } from "@/lib/dummyData";
+import UseUserInterfaceState from "@/hooks/use-user-interface-state";
+import { homeCategoryList } from "@/lib/dummy-data";
 import { cn } from "@/lib/utils";
 
 const Category = () => {
-  const { homeCategory, setHomeCategory, setHeaderImageSrc } = useUIState();
+  const { homeCategory, setHomeCategory, setHeaderImageSrc } =
+    UseUserInterfaceState();
 
   const onClickCategory = (item: { label: string; src: string }) => {
     if (homeCategory === item.label) {

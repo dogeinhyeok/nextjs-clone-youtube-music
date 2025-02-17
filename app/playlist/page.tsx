@@ -1,9 +1,9 @@
-import { getPlaylistById } from "@/lib/dummyData";
+import { getPlaylistById } from "@/lib/dummy-data";
 import { getRandomElementFromArray } from "@/lib/utils";
 import { permanentRedirect } from "next/navigation";
 import React from "react";
 import HeaderBackgroundChanger from "@/components/header-background-changer";
-import PagePadding from "@/components/pagepadding";
+import PagePadding from "@/components/page-padding";
 import PlayListHeader from "@/components/playlist-header";
 import SongListCardRow from "@/components/songlist-card-row";
 

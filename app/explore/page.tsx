@@ -1,11 +1,11 @@
 import React from "react";
-import PagePadding from "@/components/pagepadding";
+import PagePadding from "@/components/page-padding";
 import Category from "./components/category";
 import {
   dummyGenreList,
   getAllPlaylist,
   getSongListTop10,
-} from "@/lib/dummyData";
+} from "@/lib/dummy-data";
 import PlayListCarousel from "@/components/playlist-carousel";
 import SongListCarousel from "@/components/songlist-carousel";
 import GenreListCarousel from "@/components/genrelist-carousel";

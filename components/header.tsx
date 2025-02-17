@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import UserAvatar from "@/components/user-avatar";
-import PagePadding from "@/components/pagepadding";
+import PagePadding from "@/components/page-padding";
 import { FaChromecast } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import Logo from "@/components/elements/logo";
@@ -17,7 +17,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
-import useUIState from "@/hooks/useUIState";
+import UseUserInterfaceState from "@/hooks/use-user-interface-state";
 import IconButton from "./elements/icon-button";
 
 const HeaderDrawer = ({ children }: { children: React.ReactNode }) => {
@@ -47,7 +47,7 @@ const HeaderDrawer = ({ children }: { children: React.ReactNode }) => {
 };
 
 const Header = ({ children }: { children: React.ReactNode }) => {
-  const { headerImageSrc } = useUIState();
+  const { headerImageSrc } = UseUserInterfaceState();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const headRef = useRef<HTMLDivElement | null>(null);

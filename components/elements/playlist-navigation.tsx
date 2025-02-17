@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { dummyPlaylistArray } from "@/lib/dummyData";
+import { dummyPlaylistArray } from "@/lib/dummy-data";
 import { IoMdPlayCircle } from "react-icons/io";
 
 const PlayListNavigation = ({

@@ -1,8 +1,8 @@
 import React from "react";
 import Category from "./components/category";
-import PagePadding from "@/components/pagepadding";
+import PagePadding from "@/components/page-padding";
 import PlayListCarousel from "@/components/playlist-carousel";
-import { dummyPlaylistArray, getPlaylistById } from "@/lib/dummyData";
+import { dummyPlaylistArray, getPlaylistById } from "@/lib/dummy-data";
 import UserAvatar from "@/components/user-avatar";
 
 const page = async () => {

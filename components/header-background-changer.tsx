@@ -1,6 +1,6 @@
 "use client";
 
-import useUIState from "@/hooks/useUIState";
+import useUIState from "@/hooks/use-user-interface-state";
 import { useEffect } from "react";
 
 const HeaderBackgroundChanger = ({ imageSrc }: { imageSrc: string }) => {

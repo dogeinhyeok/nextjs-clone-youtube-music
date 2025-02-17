@@ -1,9 +1,9 @@
-import PagePadding from "@/components/pagepadding";
+import PagePadding from "@/components/page-padding";
 import React from "react";
 import Category from "./components/category";
 import PlayListCard from "@/components/playlist-card";
 import { getRandomElementFromArray } from "@/lib/utils";
-import { dummyPlaylistArray } from "@/lib/dummyData";
+import { dummyPlaylistArray } from "@/lib/dummy-data";
 
 const page = () => {
   return (

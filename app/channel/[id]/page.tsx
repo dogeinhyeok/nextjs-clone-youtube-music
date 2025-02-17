@@ -1,8 +1,8 @@
 import DarkButton from "@/components/elements/dark-button";
 import WhiteButton from "@/components/elements/white-button";
 import HeaderBackgroundChanger from "@/components/header-background-changer";
-import PagePadding from "@/components/pagepadding";
-import { getChannelById } from "@/lib/dummyData";
+import PagePadding from "@/components/page-padding";
+import { getChannelById } from "@/lib/dummy-data";
 import { getRandomElementFromArray } from "@/lib/utils";
 import { ShuffleIcon } from "lucide-react";
 import { permanentRedirect } from "next/navigation";
