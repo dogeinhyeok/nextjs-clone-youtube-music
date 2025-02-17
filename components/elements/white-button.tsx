@@ -8,9 +8,9 @@ const WhiteButton = ({
   className,
   ...props
 }: {
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   label: string;
-  className: string;
+  className?: string;
   props?: React.HTMLAttributes<HTMLDivElement>;
 }) => {
   return (
