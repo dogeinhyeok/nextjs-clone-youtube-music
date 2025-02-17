@@ -35,7 +35,7 @@ const SongListCardRow: React.FC<SongCardRowProps> = ({ song }) => {
       </div>
       <div className="flex flex-row items-center gap-4"></div>
       <div className="flex flex-row gap-4 justify-between basis-1/3">
-        <div className="w-[130px] truncate select-none">{song.name}</div>
+        <div className="w-[130px] truncate">{song.name}</div>
         <div
           onClick={onClickChannel}
           className="text-neutral-500 hover:underline cursor-pointer select-none"
