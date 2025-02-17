@@ -134,8 +134,8 @@ const PlayerContent: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <div>{activeSong?.name}</div>
-              <div className="text-neutral-500 text-[14px]">
-                {activeSong?.channel} • 조회수 7.8만회 • 좋아요 1.7천개
+              <div className="text-neutral-500 text-[14px] text-ellipsis">
+                {activeSong?.channel}
               </div>
             </div>
           </div>
