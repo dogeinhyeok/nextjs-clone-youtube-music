@@ -54,15 +54,11 @@ const Category = () => {
               최근 활동
             </DropdownMenuCheckboxItem>
             <DropdownMenuCheckboxItem className="p-4">
-              <span className="min-w-[40px]">
-                <FiCheck size={20} />
-              </span>
+              <span className="min-w-[40px]"></span>
               최근에 저장됨
             </DropdownMenuCheckboxItem>
             <DropdownMenuCheckboxItem className="p-4">
-              <span className="min-w-[40px]">
-                <FiCheck size={20} />
-              </span>
+              <span className="min-w-[40px]"></span>
               최근 재생한 음악
             </DropdownMenuCheckboxItem>
           </DropdownMenuContent>

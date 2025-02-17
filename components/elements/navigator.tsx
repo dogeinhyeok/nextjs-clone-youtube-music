@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { dummyPlaylistArray } from "@/lib/dummyData";
-import PlayListNav from "./playlistnav";
+import PlayListNavigation from "./playlist-navigation";
 
 const Navigator = () => {
   const pathname = usePathname();
@@ -67,7 +67,7 @@ const Navigator = () => {
           {dummyPlaylistArray.map((playlist) => {
             return (
               <li key={playlist.id}>
-                <PlayListNav playlist={playlist} />
+                <PlayListNavigation playlist={playlist} />
               </li>
             );
           })}

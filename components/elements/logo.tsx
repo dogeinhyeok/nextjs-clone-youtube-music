@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import IconButton from "./iconbutton";
+import IconButton from "./icon-button";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Image from "next/image";
 import { IoCloseOutline } from "react-icons/io5";
@@ -20,8 +20,6 @@ const Logo = ({
     push("/"); // home 이동 하는 로직
   };
 
-  const onClickMenu = () => {};
-
   return (
     <section className="flex flex-row items-center gap-3">
       {isInDrawer ? (
@@ -30,10 +28,7 @@ const Logo = ({
           icon={<IoCloseOutline size={30} />}
         />
       ) : (
-        <IconButton
-          onClick={onClickMenu}
-          icon={<RxHamburgerMenu size={24} />}
-        />
+        <IconButton icon={<RxHamburgerMenu size={24} />} />
       )}
 
       <div className="cursor-pointer" onClick={onClickLogo}>

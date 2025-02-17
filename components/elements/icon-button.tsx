@@ -5,7 +5,7 @@ const IconButton = ({
   onClick,
 }: {
   icon: React.ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 }) => {
   return (
     <div

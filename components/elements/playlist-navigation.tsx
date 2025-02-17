@@ -4,7 +4,7 @@ import React from "react";
 import { dummyPlaylistArray } from "@/lib/dummyData";
 import { IoMdPlayCircle } from "react-icons/io";
 
-const PlayListNav = ({
+const PlayListNavigation = ({
   playlist,
 }: {
   playlist: (typeof dummyPlaylistArray)[number];
@@ -16,7 +16,7 @@ const PlayListNav = ({
   };
 
   return (
-    <div className="mx-3 px-4 h-[56px] flex flex-row justify-between items-center hover:bg-neutral-700 rounded-lg group relative">
+    <div className="mx-3 px-4 h-[56px] flex flex-row justify-between items-center hover:bg-neutral-700 rounded-lg group relative cursor-pointer">
       <div className="flex-1 overflow-hidden">
         <div className="text-[14px] select-none">{playlistName}</div>
         <div className="text-[12px] text-neutral-500 select-none">{owner}</div>
@@ -28,4 +28,4 @@ const PlayListNav = ({
   );
 };
 
-export default PlayListNav;
+export default PlayListNavigation;

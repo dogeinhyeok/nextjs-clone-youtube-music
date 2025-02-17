@@ -18,11 +18,7 @@ import {
 } from "@/components/ui/drawer";
 
 import useUIState from "@/hooks/useUIState";
-import IconButton from "./elements/iconbutton";
-
-const onClickChromecast = () => {
-  console.log("chromecast");
-};
+import IconButton from "./elements/icon-button";
 
 const HeaderDrawer = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -114,10 +110,7 @@ const Header = ({ children }: { children: React.ReactNode }) => {
               </article>
             </HeaderDrawer>
             <article className="flex flex-row gap-4 items-center">
-              <IconButton
-                icon={<FaChromecast size={24} />}
-                onClick={onClickChromecast}
-              />
+              <IconButton icon={<FaChromecast size={24} />} />
               <UserAvatar size="sm" />
             </article>
           </div>
