@@ -7,7 +7,7 @@ interface UIState {
   setHeaderImageSrc: (headerImageSrc: string) => void;
 }
 
-const UseUserInterfaceState = create<UIState>((set) => ({
+const useUserInterfaceState = create<UIState>((set) => ({
   homeCategory: "",
   headerImageSrc:
     "https://images.unsplash.com/photo-1707833558984-3293e794031c",
@@ -15,4 +15,4 @@ const UseUserInterfaceState = create<UIState>((set) => ({
   setHeaderImageSrc: (headerImageSrc) => set({ headerImageSrc }),
 }));
 
-export default UseUserInterfaceState;
+export default useUserInterfaceState;

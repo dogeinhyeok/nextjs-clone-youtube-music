@@ -5,9 +5,9 @@ interface PlayerState {
   setIsVisiblePlayer: (isVisiblePlayer: boolean) => void;
 }
 
-const UsePlayerState = create<PlayerState>((set) => ({
+const usePlayerState = create<PlayerState>((set) => ({
   isVisiblePlayer: false,
   setIsVisiblePlayer: (isVisiblePlayer) => set({ isVisiblePlayer }),
 }));
 
-export default UsePlayerState;
+export default usePlayerState;
