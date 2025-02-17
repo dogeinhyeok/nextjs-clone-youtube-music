@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { Slider as PlayerSlider } from "@/components/player/player-slider";
 import { useAudio } from "react-use";
 import {
@@ -24,6 +24,20 @@ const PlayerContent: React.FC = () => {
     src: activeSong?.src || "",
     autoPlay: true,
   });
+
+  const volumeSet = useRef(false);
+
+  useEffect(() => {
+    // 초기 볼륨 설정
+    if (
+      controls &&
+      typeof controls.volume === "function" &&
+      !volumeSet.current
+    ) {
+      controls.volume(0.2); // 볼륨을 20%로 설정
+      volumeSet.current = true; // 볼륨이 설정되었음을 기록
+    }
+  }, [controls]);
 
   const isLoading = activeSong?.src && state.buffered?.length === 0;
 

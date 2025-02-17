@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 const UserAvatar = ({ size = "sm" }: { size?: "sm" | "lg" }) => {
   return (
     <Avatar className={cn("sm", size === "lg" && "w-[56px] h-[56px]")}>
-      <AvatarImage src="https://github.com/shadcn.png" />
+      <AvatarImage src="/profile.png" />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
   );
