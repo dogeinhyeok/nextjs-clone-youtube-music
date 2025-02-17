@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import UserAvatar from "@/components/user-avatar";
-import PagePadding from "@/components/page-padding";
+import PagePadding from "@/components/pagepadding";
 import { FaChromecast } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import Logo from "@/components/elements/logo";

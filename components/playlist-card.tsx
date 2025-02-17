@@ -40,7 +40,7 @@ const PlayListCard = ({ playlist }: { playlist: Playlist }) => {
             }
             alt="thumbnail"
             fill
-            className="object-cover"
+            className="object-cover rounded-md"
             sizes="fill"
           />
         )}

@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import PlayListCard from "@/components/playcard";
+import PlayListCard from "@/components/playlist-card";
 
 interface PlayListCarouselProps {
   title: string;

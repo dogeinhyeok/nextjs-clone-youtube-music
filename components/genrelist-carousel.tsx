@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 
 import { chunkArray } from "@/lib/utils";
-import GenreCard from "@/components/genrecard";
+import GenreCard from "@/components/genrelist-card";
 
 interface GenreListCarouselProps {
   title: string;
@@ -63,7 +63,7 @@ const GenreListCarousel: React.FC<GenreListCarouselProps> = ({
         <CarouselContent className="mt-4">
           {chunkedGenreList?.map((genreList, index) => {
             return (
-              <CarouselItem key={index} className="basis-1/3 lg:basis-1/4">
+              <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
                 <GenreColumn genreList={genreList} />
               </CarouselItem>
             );

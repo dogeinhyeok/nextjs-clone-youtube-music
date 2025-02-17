@@ -1,6 +1,6 @@
 import React from "react";
 import Category from "./components/category";
-import PagePadding from "@/components/page-padding";
+import PagePadding from "@/components/pagepadding";
 import PlayListCarousel from "@/components/playlist-carousel";
 import { dummyPlaylistArray, getPlaylistById } from "@/lib/dummyData";
 import UserAvatar from "@/components/user-avatar";

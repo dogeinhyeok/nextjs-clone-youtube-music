@@ -1,5 +1,5 @@
 import React from "react";
-import PagePadding from "@/components/page-padding";
+import PagePadding from "@/components/pagepadding";
 import Category from "./components/category";
 import {
   dummyGenreList,

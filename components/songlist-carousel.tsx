@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 
 import { chunkArray } from "@/lib/utils";
-import SongListCard from "./songcard";
+import SongListCard from "./songlist-card";
 
 interface SongListCarouselProps {
   title: string;
