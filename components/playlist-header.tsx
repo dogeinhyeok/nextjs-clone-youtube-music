@@ -27,7 +27,12 @@ const PlayListHeader = ({ playlist }: { playlist: Playlist }) => {
     <section>
       <div className="flex gap-[50px] flex-row">
         <div className="relative h-[160px] w-[160px] lg:h-[240px] lg:w-[240px]">
-          <Image alt="songImg" fill src={randomSong?.imageSrc} />
+          <Image
+            alt="songImg"
+            fill
+            src={randomSong?.imageSrc}
+            className="object-cover"
+          />
         </div>
         <article className="flex flex-col justify-center">
           <div className="font-bold text-[28px]">{playlistName}</div>
