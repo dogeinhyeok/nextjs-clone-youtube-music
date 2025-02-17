@@ -11,7 +11,7 @@ const page = () => {
       <div className="mt-9" />
       <Category />
       <div className="mt-12" />
-      <section className="grid gap-6 grid-cols-3 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+      <section className="grid gap-6 grid-cols-3 md:grid-cols-3 xl:grid-cols-4">
         <PlayListCard
           playlist={getRandomElementFromArray(dummyPlaylistArray)}
         />
